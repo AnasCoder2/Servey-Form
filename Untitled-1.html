@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Servery Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <header>
+        <h1>الخصاونة للإعلان</h1>
+        <p class="desc">نقدر لك منحنا بعضا من وقتك، للعمل على تطوير خدماتنا</p>
+    </header>
+    <form id="container">
+        <section class="bio">
+            <div class="name">
+                <label for="name">الاسم</label><br>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="email">
+                <label for="email">الإيميل</label><br>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="age">
+                <label for="age">العمر</label>
+                <span class="age-span">(اختياري)</span>
+                <br>
+                <input type="number" name="age" id="age" min="13">
+            </div>
+            <div class="role">
+                <label for="role">أي الخيارات التالية تمثل وضعك الحالي :</label><br>
+                <select id="role" required onfocus='this.size=10;' onblur='this.size=0;'
+                    onchange='this.size=1; this.blur();'>
+                    <option value="">اختر واحدة</option>
+                    <option value="طالب">طالب</option>
+                    <option value="موظف بدوام كامل">موظف بدوام كامل</option>
+                    <option value="">متفرغ للتعلم</option>
+                    <option value="لا أفضل الإجابة">لا أفضل الإجابة</option>
+                    <option value="غير ذلك">غير ذلك</option>
+                </select>
+            </div>
+        </section>
+        <section class="recommend">
+            <h2>هل ستوصي أصدقاءك بخدماتنا ؟</h2>
+            <label class="radio-container">
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+                نعم، بالتأكيد
+            </label>
+            <label class="radio-container">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+                قد أفعل
+            </label>
+            <label class="radio-container">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+                لا أعتقد ذلك
+            </label>
+        </section>
+        <section class="product">
+            <div class="product-type">
+                <label for="type">حدد نوع المنتجات المفضلة لديك:</label><br>
+                <select id="type" required onfocus='this.size=10;' onblur='this.size=0;'
+                    onchange='this.size=1; this.blur();'>
+                    <option value="">اختر واحدة</option>
+                    <option value="آوتدور">الطباعة الخارجية (outdoor)</option>
+                    <option value="إندور">الطباعة الداخلية (indoor)</option>
+                    <option value="">الطباعة الحرارية (sublimation)</option>
+                    <option value="لا أفضل الإجابة">خدمات الدفع الإلكتروني (e-pay)</option>
+                    <option value="غير ذلك">غير ذلك</option>
+                </select>
+            </div>
+        </section>
+        <section class="improve">
+            <h2>ما الذي تود أن نعمل على تحسينه ؟</h2>
+            <span>(حدد كل ما يحتاج)</span>
+            <label class="improve-container">
+                <input type="checkbox" checked="checked" name="checkbox">
+                <span class="box-checkmark"></span>
+                الطباعة الخاريجية (outdoor) </label>
+            <label class="improve-container">
+                <input type="checkbox" name="checkbox">
+                <span class="box-checkmark"></span>
+                الطباعة الداخلية (indoor) </label>
+            <label class="improve-container">
+                <input type="checkbox" name="checkbox">
+                <span class="box-checkmark"></span>
+                الطباعة الحرارية (sublimation) </label>
+            <label class="improve-container">
+                <input type="checkbox" name="checkbox">
+                <span class="box-checkmark"></span>
+                جودة التصميم </label>
+            <label class="improve-container">
+                <input type="checkbox" name="checkbox">
+                <span class="box-checkmark"></span>
+                الأسعار </label>
+            <label class="improve-container">
+                <input type="checkbox" name="checkbox">
+                <span class="box-checkmark"></span>
+                سرعة التنفيذ </label>
+            <label class="improve-container">
+                <input type="checkbox" name="checkbox">
+                <span class="box-checkmark"></span>
+                طاقم العمل</label>
+        </section>
+        <section class="comments-container">
+            <h2 class="comments-h2">أي ملاحظات أو اقتراحات</h2>
+            <div class="comments">
+                <textarea rows="3" placeholder="لا تبخل علينا بالنصيحة..."></textarea>
+            </div>
+        </section>
+        <button type="submit">تقديم</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700&display=swap');
+
+*,
+*::berfor,
+*::after {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --color-white: #f3f3f3;
+    --first-color: #9F2D00;
+    --first-color-alpha: rgba(159, 45, 0, 0.85);
+    --second-color: #ffb81f;
+    --third-color: #f6ff3f;
+    --text-background: antiquewhite;
+}
+
+html {
+    font-size: 10px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(115deg,
+            rgba(219, 208, 231, 0.9) 1.2%,
+            rgba(169, 220, 215, 0.9) 31.5%,
+            rgba(248, 232, 130, 0.9) 66.4%,
+            rgba(230, 174, 208, 0.9) 98.8%),
+        url(https://i.ibb.co/rmx318R/backgroundpng.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+header {
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#container {
+    width: 90%;
+    max-width: 800px;
+    height: fit-content;
+    background-color: var(--first-color-alpha);
+    padding: 2rem;
+    color: var(--color-white);
+    border-radius: 0.8rem;
+    margin: 2rem auto;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--first-color);
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.bio {
+    width: 90%;
+    margin: auto;
+    font-size: 1.5rem;
+
+}
+
+input,
+select,
+textarea {
+    color: var(--first-color);
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    font-weight: bold;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: var(--text-background);
+    border-radius: 0.4rem;
+    border: none;
+}
+
+.bio input {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.bio select {
+    width: 102%;
+    margin: 1rem auto;
+}
+
+#container div {
+    margin-bottom: 3rem;
+}
+
+span {
+    font-size: 1.2rem;
+}
+
+option:hover,
+option:checked {
+    box-shadow: 0 0 10px 100px #ffb81f inset;
+}
+
+/* هنا تنسيق سؤال هل توصي أصدقاءك */
+h2:not(.comments-h2) {
+    display: inline;
+    margin-right: 3.5rem;
+    font-weight: normal;
+}
+
+/* Customize the label (the radio container) */
+.radio-container,
+.improve-container {
+    display: block;
+    position: relative;
+    padding-right: 7rem;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input,
+.improve-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark,
+.box-checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: #eee;
+    margin-right: 3.5rem;
+    margin-top: 0.4rem;
+}
+
+.checkmark {
+    border-radius: 50%;
+}
+
+.box-checkmark {
+    border-radius: 15%;
+}
+
+/* On mouse-over, add a second color background color */
+.radio-container:hover input~.checkmark,
+.improve-container:hover input~.box-checkmark {
+    background-color: var(--second-color);
+}
+
+/* When the radio button is checked, add a second color background */
+.radio-container input:checked~.checkmark,
+.improve-container input:checked~.box-checkmark {
+    background-color: var(--second-color);
+}
+
+/* Create the indicator (the dot/squre - hidden when not checked) */
+.checkmark:after,
+.box-checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/squre) when checked */
+.radio-container input:checked~.checkmark:after,
+.improve-container input:checked~.box-checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/squre) */
+.radio-container .checkmark:after,
+.improve-container .box-checkmark:after {
+    top: 0.593rem;
+    left: 0.61rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: white;
+}
+
+.radio-container .checkmark:after {
+    border-radius: 50%;
+}
+
+.improve-container .box-checkmark:after {
+    border-radius: 15%;
+}
+
+/* هنا انتهى تنسيق سؤال هل توصي أصدقاءك */
+
+.product, .comments-container, button{
+    width: 90%;
+    margin: auto;
+    font-size: 1.5rem;
+    margin-top: 2.9rem;
+}
+
+.product-type select, .comments textarea {
+    width: 102%;
+    margin: 1rem auto;
+}
+.comments-h2{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--first-color);
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    font-weight: bold;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: var(--second-color);
+    border-radius: 0.4rem;
+    border: none;
+    margin-bottom: 2rem;
+    width: 80%;
+}
